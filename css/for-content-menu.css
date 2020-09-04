@@ -1,0 +1,21 @@
+.context-menu-item.context-menu-hover {
+	background-color: #7a7a7a;
+}
+
+.context-menu-icon::before,
+.context-menu-icon.context-menu-icon--fa::before {
+	color: #585858;
+}
+
+.context-menu-separator {
+	padding-left: 63px;
+}
+
+.context-menu-root, .context-menu-list {
+	min-width: 90px;
+	max-width: 100px;
+}
+
+.context-menu-item {
+	padding-right: 0px;
+}

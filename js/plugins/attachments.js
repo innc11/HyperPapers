@@ -1,0 +1,5 @@
+function myplugin_attachments() {
+
+
+	
+}

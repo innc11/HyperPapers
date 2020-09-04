@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>OP</title>
+
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		
+		<link rel="shortcut icon" href="icons/paper-file.png" type="image/png" />
+		
+		<!-- jquery -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+		<!-- jquery-ui -->
+		<link href="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
+
+		<!-- jquery.cookie -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.js"></script>
+
+		<!-- jquery.contextMenu -->
+		<link href="https://cdn.jsdelivr.net/npm/jquery-contextmenu@2.9.2/dist/jquery.contextMenu.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/jquery-contextmenu@2.9.2/dist/jquery.contextMenu.min.js"></script>
+		
+		<!-- bulma -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.css">
+
+		<!-- font awesome -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/scrollbar.css" />
+		<link rel="stylesheet" href="css/for-jqueryui.css" />
+		<link rel="stylesheet" href="css/for-content-menu.css" />
+		<link rel="stylesheet" href="css/for-bulma.css" />
+		<link rel="stylesheet" href="css/for-hypermd.css" />
+		<link rel="stylesheet" href="css/dark.css" />
+	</head>
+	
+	<body>
+		<div id="statebar"></div>
+		<div id="container" style="flex: 1; overflow: auto;">
+			<div id="browser"></div>
+			<div id="editor">
+				<div class="editor-toolbar">
+					<div id="save" class="button is-small">保存</div>
+					<div id="attachmentsDialog" class="button is-small">图片</div>
+					<div id="closeDoc" class="button is-small" title="右键点击：不保存关闭">关闭</div>
+				</div>
+				<div style="flex: 1; overflow: hidden;">
+					<textarea id="hypermdtextarea"></textarea>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

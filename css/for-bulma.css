@@ -1,0 +1,17 @@
+.buttons .button {
+	margin-bottom: 0px;
+}
+
+.button.is-small,
+.buttons.are-small .button:not(.is-normal):not(.is-medium):not(.is-large) {
+	border-radius: 3px;
+}
+
+.level:not(:last-child),
+.buttons:not(:last-child) {
+	margin-bottom: 0px;
+}
+
+html {
+	overflow-y: auto;
+}
