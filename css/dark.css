@@ -24,7 +24,7 @@
 	
 	.ui-dialog-title,
 	.ui-dialog-content label {
-		color: #c3c3c3;
+		color: #c3c3c3 !important;
 	}
 	
 	.ui-dialog-titlebar {
@@ -47,7 +47,7 @@
 	}
 	
 	#editor {
-		background-color: #383838;
+		background-color: #383838 !important;
 	}
 	
 	/* for hypermd */
