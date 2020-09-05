@@ -1,9 +1,7 @@
 import * as $ from 'jquery'
 import * as HyperMD from 'hypermd'
-import WebSocketConnection from './WebSocket'
 import { bubble, getResourceServerUrlHeader } from './utils'
 import { fileBrowser, websocket, pluginSystem } from '.'
-import {MyPluginSystem} from './PluginSystem'
 
 interface UploadTask
 {

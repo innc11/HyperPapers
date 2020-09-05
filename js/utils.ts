@@ -9,7 +9,7 @@ export function getResourceServerUrlHeader(): string
 		user = "NO_USER"
 	
 	let protocol = location.protocol.split(":")[0]
-	let reg = new RegExp("^\\w+(?=:)", "g")
+	let reg = new RegExp("^\\w+(?=:)", "g") // http or https
 
 	return websocket.url.replace(reg, protocol)+"/_/"+user+"/"
 }
