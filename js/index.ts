@@ -43,7 +43,7 @@ $(function() {
 
 	setTimeout(function() {
 		fileBrowser.updateTitle()
-	}, 200)
+	}, 100)
 
 	initHypermd()
 	

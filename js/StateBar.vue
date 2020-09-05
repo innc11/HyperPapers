@@ -55,7 +55,6 @@ export default {
             "linkstate": false,
         }
     },
-    // props: ['linkstate'],
     computed: {
         'filebrowser': function() {
             return fileBrowser
@@ -66,8 +65,7 @@ export default {
             return (fileBrowser.contentModified? '*':'') 
                 + (this.linkstate? '':'[离线]')
                 + fileBrowser.endOfPath
-                + (fileBrowser.folder!=''? ' - ':'')
-                + "OxygenPapers"
+                + (fileBrowser.endOfPath==''? 'HyperPapers':'')
         }
     },
     watch: {
