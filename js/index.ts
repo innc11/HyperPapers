@@ -1,4 +1,4 @@
-import {EventRouter} from './EventRouter'
+import {EventRouter, RouteRule} from './EventRouter'
 import * as $ from 'jquery'
 import WebSocketConnection from './WebSocket'
 import Vue from 'vue'
