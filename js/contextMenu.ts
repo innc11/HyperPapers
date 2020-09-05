@@ -69,7 +69,7 @@ export function updateContextMenu() {
 					break
 				case "create-folder":
 					let result2 = prompt("输入文件夹", "")
-					if(result==null || result=="") break
+					if(result2==null || result2=="") break
 					websocket.sendMessage({"action":"create_folder", "path":path + result2})
 					break
 				case "paste":
