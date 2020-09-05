@@ -12,10 +12,8 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|jpg|gif|ttf|eot|woff|woff2)$/i,
-                use: [
-                    { loader: 'url-loader', options: { limit: 8192 } }
-                ]
+                test: /\.(svg|png|jpe?g|gif|ttf|eot|woff|woff2)$/i,
+                loader: 'url-loader', options: { limit: 8192 } 
             },
             { test: /\.css$/,  use: ['style-loader', 'css-loader'] },
             { test: /\.tsx?$/, loader: 'ts-loader',  options: { appendTsSuffixTo: [/\.vue$/] } },
@@ -26,7 +24,7 @@ module.exports = {
     plugins: [
         new VueLoaderPlugin(),
         new CleanWebpackPlugin(),
-        new htmlwebpack({template: './index.html' }),
+        new htmlwebpack({template: './index.html', favicon: './favicon.png'}),
     ],
     resolve: {
         alias: {
