@@ -3,7 +3,8 @@
         <div class="filebrowser-path"
             v-bind:style="editing? 'background-color: yellow':''"
         >
-            <div class="inline" title="刷新" v-on:click="onClickRefresh()">
+            <div class="inline" 
+                    v-on:click="stateBar.debugMode = !stateBar.debugMode" >
                 <i class="fa fa-window-minimize" aria-hidden="true"
                     style="font-size: 14px; cursor: pointer;"></i>
             </div>
@@ -443,11 +444,6 @@
             this.setPath(cell.path)
     }
 
-    function onClickRefresh() {
-        this.refresh()
-        bubble('已刷新')
-    }
-
     function isFileShown(file: FileObject) {
         let shadows = ["preferences.json", "RecycleBin"]
         let path = this.folder + (this.folder!=''?'/':'') + file.filename
@@ -499,7 +495,6 @@
             isFileEditing: isFileEditing,
             itemClickCallback: onItemClick,
             onClickPathCell: onClickPathCell,
-            onClickRefresh: onClickRefresh,
             isFileShown: isFileShown
         },
         watch: {

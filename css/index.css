@@ -7,11 +7,6 @@
 	flex-direction: column;
 }
 
-.editor-toolbar {
-	padding: 5px;
-	text-align: center;
-}
-
 .inline {
 	display: inline;
 }

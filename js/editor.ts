@@ -149,11 +149,6 @@ function initHypermd() {
 		}
 	})
 	
-	
-	$('#save').click(function(e: any){
-		hye_save(() => {}, true)
-	})
-	
 	// 上传文件处理回调
 	// https://github.com/LuRenJiasWorld/Wp-HyperMD/blob/ad935695da1a1957b8bcf7569e364000be926239/assets/Config/HyperMD.js
 	hye.setOption('hmdInsertFile', {

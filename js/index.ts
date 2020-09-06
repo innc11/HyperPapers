@@ -54,40 +54,11 @@ $(function() {
 
 	initHypermd()
 	
-	pluginSystem.loadPlugin('auth', function(plugin) {
-		$('#connect').click((e: any) => {
-			plugin.vue.open()
-		})
-	})
+	pluginSystem.loadPlugin('auth', function(plugin) {})
 	
-	pluginSystem.loadPlugin('attach', function(plugin) {
-		$('#attachmentsDialog').click((e: any) => {
-			if(fileBrowser.editing)
-			plugin.vue.open()
-		})
-	})
+	pluginSystem.loadPlugin('attach', function(plugin) {})
 
 	pluginSystem.loadPlugin('notify', function(plugin) {})
-	
-	$('#closeDoc').click(function(e: any) {
-		if(fileBrowser.editing && !fileBrowser.contentLoaded) {
-			bubble("文件内容还未加载完成，无法关闭")
-			return
-		}
-		
-		if(fileBrowser.editing)
-			fileBrowser.back()
-	})
-	
-	$('#closeDoc').bind("contextmenu", function () {
-		if(confirm("不保存关闭?")) {
-			fileBrowser.contentModified = false
-			$('#closeDoc').click()
-		}
-			
-		return false;
-	})
-	
 	
 	eventRouter.registerRouteRule('dir_content', true, function(message: any, rule: RouteRule) {
 		fileBrowser.a_files = []
