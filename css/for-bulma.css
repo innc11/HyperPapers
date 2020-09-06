@@ -15,3 +15,7 @@
 html {
 	overflow-y: auto;
 }
+
+.buttons:last-child {
+    margin-bottom: 0px;
+}

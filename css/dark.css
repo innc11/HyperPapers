@@ -18,7 +18,7 @@
 	/* for jquery ui */
 	
 	.ui-dialog {
-		background-color: #3e3e3e;
+		background-color: #3e3e3e !important;
 		border-color: #464646 !important;
 	}
 	
@@ -28,11 +28,11 @@
 	}
 	
 	.ui-dialog-titlebar {
-		border-color: #565656;
+		border-color: #565656 !important;
 	}
 	
 	.ui-dialog-titlebar:active {
-		background-color: #717171;
+		background-color: #717171 !important;
 	}
 	
 	
