@@ -1,6 +1,6 @@
 {
   "name": "hyper-papers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "codemirror": "^5.57.0",
     "hypermd": "^0.3.11",
