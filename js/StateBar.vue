@@ -2,15 +2,6 @@
     <div id="statebar">
         <div style="width: fit-content; margin: auto; display: flex;" >
             
-            <div class="buttons are-small" >
-                <button id="connect" class="button"
-                    v-bind:class="linkstate?'statabar-connected':''"
-                    v-on:click="onClickConnection" 
-                    v-on:click.right.prevent="alternateWindow = !alternateWindow" >
-                    {{linkstate?'已登录：'+user:"离线"}}
-                </button>
-            </div>
-            
             <div class="buttons are-small" 
                 v-if="clipboard!='' && !filebrowser.editing" >
                 
@@ -27,7 +18,16 @@
             <div class="inline" 
                 style="margin: 0px 5px; display: inline-flex; align-self: center; transition:  all 1s;"
                 v-bind:style="filebrowser.contentModified? 'color: #f38d42':''" >
-                {{filebrowser.contentModified? '*':''}}{{filebrowser.editing? '正在编辑：'+filebrowser.endOfPath:''}}
+                {{filebrowser.contentModified? '*':''}}{{filebrowser.editing? '正在编辑 '+filebrowser.endOfPath:''}}
+            </div>
+
+            <div class="buttons are-small" style="margin-right: 8px;">
+                <button id="connect" class="button is-small"
+                    v-bind:class="linkstate?'statabar-connected':''"
+                    v-on:click="onClickConnection" 
+                    v-on:click.right.prevent="alternateWindow = !alternateWindow" >
+                    {{linkstate?'已登录 '+user:"离线"}}
+                </button>
             </div>
 
             <div class="buttons are-small"

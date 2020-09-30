@@ -37,7 +37,7 @@
                 <span class="level-left">
                     <i class="file-item-icon file-item-file   fa fa-file-text-o"   aria-hidden="true" v-if="f.isfile"></i>
                     <i class="file-item-icon file-item-folder fa fa-folder-open-o" aria-hidden="true" v-if="!f.isfile"></i>
-                    <div class="inline file-item-filename" style="margin-left: 5px;">
+                    <div class="inline file-item-filename">
                         <div class="file-item-filename-text">{{stateBar!=null && stateBar.debugMode? f.filename:f.simplename}}</div>
                     </div>
                 </span>
@@ -71,11 +71,12 @@
         padding: 3px 8px;
     }
     .path-cell-split {
-        transform: scale(0.65);
+        transform: scale(0.55);
     }
     .path-cell-path {
         cursor: pointer;
         border-bottom: #00000030 1px solid;
+        font-size: 1.2rem;
     }
     .path-cell-path:hover {
         background-color: #c7c7c7;
@@ -91,7 +92,7 @@
         
         padding: 0px 10px 6px 10px;
         margin: 0px 0px 4px 0px;
-        line-height: 23px;
+        line-height: 1.5rem;
         border-bottom: solid 1px #dfdfe0;
         
         word-break: break-all;
@@ -122,7 +123,7 @@
     .file-item {
         margin: 0px 4px;
         padding: 0px 4px;
-        line-height: 30px;
+        line-height: 2rem;
         cursor: pointer;
         overflow: hidden;
         
@@ -153,7 +154,7 @@
         transition: opacity 0.2s;
         opacity: 0.3;
         float: right;
-        font-size: 16px;
+        font-size: 1rem;
         color: #ff5500;
     }
 
@@ -165,19 +166,50 @@
     .file-item-filename {
         white-space: nowrap;
         transition: right 0.7s;
+        margin-left: 0.5rem;
     }
 
     .file-item-filename-text {
         text-overflow: ellipsis; 
         display: inline; 
         overflow: hidden;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .file-item:hover .file-item-capacity {
         opacity: 1;
     }
 
+    @media(max-width: 768px)
+    {
+        #filebrowser {
+            height: 100% !important;
+            width: 100% !important;
+
+            /* padding: 0px !important; */
+            margin: 0px !important;
+            
+            border: 0px !important;
+            border-radius: 6px !important;
+        }
+
+        .file-item-filename {
+            margin-left: 0.4rem;
+        }
+
+        .file-item-filename-text {
+            font-size: 1.2rem;
+        }
+
+        .file-item {
+            line-height: 2.75rem;
+        }
+
+        .file-item-icon {
+            font-size: 1.6rem;
+            width: 20px;
+        }
+    }
 
     @media(prefers-color-scheme: dark) {
 
