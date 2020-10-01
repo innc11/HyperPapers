@@ -52,3 +52,10 @@ input[type=password]:focus {
 	outline: none;
 }
 
+
+@media(max-width: 768px)
+{
+	div {
+		font-size: 1.2rem;
+	}
+}

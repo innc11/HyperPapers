@@ -19,3 +19,20 @@ html {
 .buttons:last-child {
     margin-bottom: 0px;
 }
+
+
+@media(max-width: 768px)
+{
+	.button {
+		font-size: inherit !important;
+		height: inherit;
+
+		padding-bottom: calc(0.2em - 1px);
+		padding-left: 0.6em;
+		padding-right: 0.6em;
+		padding-top: calc(0.2em - 1px);
+	}
+
+}
+
+
