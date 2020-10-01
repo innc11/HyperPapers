@@ -41,7 +41,7 @@
     }
 
     .auth-label{
-        width: 40px;
+        /* width: 40px; */
         padding: 7px 0 15px 5px;
         margin: 0 0 2px;
         display: inline-block;
@@ -62,7 +62,7 @@ import Vue from 'vue'
 import * as $ from 'jquery'
 import 'jquery-ui'
 import { bubble } from '../utils';
-import { websocket } from '..';
+import { stateBar, websocket } from '..';
 import { PluginObject } from '../PluginSystem';
 
 // https://www.cnblogs.com/lanleiming/p/7096973.html
@@ -175,6 +175,7 @@ function initDialog() {
         checkFieldsAndSetCookies()
         
         if(websocket.isConnected()) {
+            stateBar.keepConnection = false
             websocket.disconnect()
         }else{
             let add = getCookies()

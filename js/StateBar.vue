@@ -15,8 +15,7 @@
                 >取消</button>
             </div>
                 
-            <div class="inline" 
-                style="margin: 0px 5px; display: inline-flex; align-self: center; transition:  all 1s;"
+            <div class="inline editing-file" 
                 v-bind:style="filebrowser.contentModified? 'color: #f38d42':''" >
                 {{filebrowser.contentModified? '*':''}}{{filebrowser.editing? '正在编辑 '+filebrowser.endOfPath:''}}
             </div>
@@ -26,7 +25,7 @@
                     v-bind:class="linkstate?'statabar-connected':''"
                     v-on:click="onClickConnection" 
                     v-on:click.right.prevent="alternateWindow = !alternateWindow" >
-                    {{linkstate?'已登录 '+user:"离线"}}
+                    {{linkstate? authenticating? '正在认证':'已登录 '+user:'离线'}}
                 </button>
             </div>
 
@@ -35,7 +34,7 @@
 
                 <div class="button" v-on:click="onClickSave" > 保存</div>
                 <div class="button" v-on:click="onClickAttachments">图片</div>
-                <div class="button" title="右键点击：不保存关闭"
+                <div class="button" title='右键点击：不保存关闭'
                     v-on:click="onClickClose"
                     v-on:click.right.prevent="onClickCloseWithRight" >
                     关闭
@@ -62,6 +61,9 @@ export default {
             "alternateWindow": false,
             
             'user': '',
+            'keepConnection': false,
+            'nextReconnection': 0,
+            'authenticating': false,
             "linkstate": false,
         }
     },
@@ -72,8 +74,10 @@ export default {
     },
     methods: {
         getTitle: function() {
+            let reconcectionText = this.nextReconnection!=0?'[重连'+parseInt(this.nextReconnection/1000+'')+']':'[正在重连]'
+            
             return (fileBrowser.contentModified? '*':'') 
-                + (this.linkstate? '':'[离线]')
+                + (this.linkstate? '':this.keepConnection? reconcectionText:'[离线]')
                 + fileBrowser.endOfPath
                 + (fileBrowser.endOfPath==''? 'HyperPapers':'')
         },
@@ -141,6 +145,20 @@ export default {
     @media(prefers-color-scheme: dark) {
         #statebar {
             box-shadow: #484848 0px -6px 3px -5px inset;
+        }
+    }
+
+    .editing-file {
+        margin: 0px 5px; 
+        display: inline-flex; 
+        align-self: center; 
+        transition: all 1s;
+    }
+
+    @media(max-width: 768px)
+    {
+        .editing-file {
+            display: none !important;
         }
     }
 </style>

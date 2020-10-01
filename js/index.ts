@@ -121,6 +121,15 @@ $(function() {
 		bubble(message.content, message.time) // 显示服务端发来的消息弹框
 	})
 
+
+	eventRouter.registerRouteRule('authenticated', true, function(message: any, rule: RouteRule) {
+		bubble("已登录 "+message.user)
+		
+		stateBar.keepConnection = true
+		stateBar.authenticating = false
+		stateBar.user = message.user
+	})
+
 	websocketInit()
 
 })
@@ -156,7 +165,34 @@ function websocketInit()
 	
 		eventRouter.clearRouteRules()
 		
-		bubble("连接已断开", 5000)
+		if (!stateBar.keepConnection)
+		{
+			bubble("连接已断开", 5000)
+		}else{
+			bubble("重连失败")
+		}
+
+		// 自动重连机制
+		if (stateBar.keepConnection)
+		{
+			let startTime = new Date().getTime() + 5000
+
+			let timer = setInterval(() => {
+				let timeDiff = startTime - new Date().getTime()
+
+				if (timeDiff>0)
+				{
+					stateBar.nextReconnection = timeDiff
+				}else{
+					stateBar.nextReconnection = 0
+					clearInterval(timer)
+					websocket.connect()
+				}
+
+				fileBrowser.updateTitle()
+			}, 200)
+
+		}
 	}
 }
 
@@ -165,7 +201,7 @@ function authenticate()
 	let user = $.cookie('user')
 	let password = $.cookie('password')
 	
-	stateBar.user = user
+	stateBar.authenticating = true
 	
 	websocket.sendMessage({
 		action: "auth", 

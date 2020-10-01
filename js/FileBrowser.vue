@@ -493,6 +493,12 @@
         this.updateTitle()
     }
 
+    function watcher_contentModified(newValue: boolean, oldValue: boolean) {
+        this.updateTitle()
+    }
+
+    
+
     export default {
         data: function() {
             return {
@@ -531,6 +537,7 @@
         },
         watch: {
             a_paths: watcher_path,
+            contentModified: watcher_contentModified,
         }
     }
 </script>
