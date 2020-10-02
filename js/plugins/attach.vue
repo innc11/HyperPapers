@@ -138,7 +138,7 @@ import * as $ from 'jquery'
 import 'jquery-ui'
 import { stateBar, eventRouter, websocket, fileBrowser } from '..'
 import { bubble, getResourceServerUrlHeader, byteConvert } from '../utils'
-import { RouteRule } from '../EventRouter';
+import { RouteRule } from '../DataRouter';
 import { PluginObject } from '../PluginSystem';
 import { hye } from '../editor';
 

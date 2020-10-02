@@ -5,7 +5,7 @@ interface RouteRule
 	callback: (message: any, rule: RouteRule) => any
 }
 
-class EventRouter
+class DataRouter
 {
 	private table: Array<RouteRule>
 
@@ -91,5 +91,5 @@ class EventRouter
 
 export {
 	RouteRule, 
-	EventRouter
+	DataRouter as EventRouter
 }

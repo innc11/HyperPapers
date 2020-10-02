@@ -25,7 +25,7 @@
                     v-bind:class="linkstate?'statabar-connected':''"
                     v-on:click="onClickConnection" 
                     v-on:click.right.prevent="alternateWindow = !alternateWindow" >
-                    {{linkstate? authenticating? '正在认证':'已登录 '+user:'离线'}}
+                    {{linkstate? authenticating? '正在登录':'当前用户 '+user:'离线'}}
                 </button>
             </div>
 
@@ -48,9 +48,9 @@
 <script lang="ts">
 import Vue from 'vue'
 import * as $ from 'jquery'
-import { fileBrowser, pluginSystem } from '.'
-import { bubble } from './utils'
-import { hye_save } from './editor'
+import { fileBrowser, pluginSystem } from '..'
+import { bubble } from '../utils'
+import { hye_save } from '../editor'
 
 export default {
     data: function() {

@@ -107,17 +107,15 @@
     }
 
     #filebrowser {
-        height: calc(100% - 20px);
-        width: calc(100% - 30px);
-        max-width: 600px;
-        
-        padding: 20px;
-        margin:  3px auto;
+        height: calc(100% - 80px);
+        width: 600px;
+        padding: 30px;
+        margin: 40px auto;
         display: flex;
         flex-direction: column;
-        box-shadow: 2px 2px 6px #cfcfcf;
+        box-shadow: 2px 2px 6px #e0e0e0;
         border: 1px solid #9898982b;
-        border-radius: 6px;
+        border-radius: 3px;
     }
 
     .file-item {
@@ -140,14 +138,15 @@
     .file-item-icon {
         font-size: 18px;
         width: 20px;
+        text-shadow: 1px 0.5px #80808033;
     }
 
     .file-item-file {
-        color: #f7ad00;
+        color: #8a8a8ae0;
     }
 
     .file-item-folder {
-        color: #003ff77c;
+        color: #efab13;
     }
 
     .file-item-capacity {
@@ -190,7 +189,7 @@
             margin: 0px !important;
             
             border: 0px !important;
-            border-radius: 6px !important;
+            border-radius: 0px !important;
         }
 
         .file-item-filename {
@@ -251,9 +250,9 @@
 <script lang="ts">
     import Vue from 'vue'
     import * as $ from 'jquery'
-    import {bubble} from './utils'
-    import {hye, hye_save} from './editor'
-    import { stateBar, websocket } from '.'
+    import {bubble} from '../utils'
+    import {hye, hye_save} from '../editor'
+    import { stateBar, websocket } from '..'
 
     interface FileObject
     {
