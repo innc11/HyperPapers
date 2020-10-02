@@ -4,7 +4,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
-    entry: ['./js/index.ts', './js/plugins/auth.vue', './js/plugins/attach.vue'],
+    entry: ['./js/index.ts', './js/plugins/auth.vue', './js/plugins/attach.vue', './js/plugins/notify.vue'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'allinone.js'
