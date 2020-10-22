@@ -9,14 +9,14 @@ import { CreateElement } from 'vue/types/umd'
 import { hye, initHypermd } from './editor'
 import { getResourceServerUrlHeader, bubble } from './utils'
 import { updateContextMenu } from './contextMenu'
-import '../css/dark.css'
-import '../css/for-bulma.css'
 import '../css/for-content-menu.css'
 import '../css/for-hypermd.css'
 import '../css/for-jqueryui.css'
 import '../css/index.css'
 import '../css/scrollbar.css'
 import icon from '../icons/paper-file.png'
+
+export let version = '1.1'
 
 export let stateBar: any = null
 export let fileBrowser: any = null

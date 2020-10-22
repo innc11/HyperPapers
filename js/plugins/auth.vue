@@ -34,14 +34,11 @@
         margin-left: 8px;
         width: 283px;
         color: #999 !important;
-        
         font-size: 1rem;
-        
         flex: 1;
     }
 
     .auth-label{
-        /* width: 40px; */
         padding: 7px 0 15px 5px;
         margin: 0 0 2px;
         display: inline-block;

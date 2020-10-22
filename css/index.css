@@ -16,20 +16,19 @@
 	color: #fff;
 }
 
+html {
+	height: 100%;
+}
+
 body {
-	position: absolute;
-	left: 0px;
-	right: 0px;
-	top: 0px;
-	bottom: 0px;
-	
-	margin: 0;
+	height: 100%;
+	margin: auto;
 	display: flex;
 	flex-direction: column;
 }
 
 div {
-	font-family: 'Consolas', '微软雅黑', 'Open Sans', 'Helvetica', 'Tahoma, Arial', 'Hiragino Sans GB', "Microsoft YaHei", "Micro Hei", 'SimSun', "宋体", 'Heiti', "黑体", 'sans-serif';
+	font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, '微软雅黑', 'Consolas', 'Open Sans', 'Helvetica', 'Tahoma, Arial', 'Hiragino Sans GB', "Microsoft YaHei", "Micro Hei", 'SimSun', "宋体", 'Heiti', "黑体", 'sans-serif';
 	font-size: 14px;
 }
 
@@ -40,7 +39,6 @@ input[type=text],input[type=password] {
 	padding-left: 10px;
 	border-radius: 5px;
 	width: 160px;
-	
 	transition: all 0.2s;
 }
 input[type=text]:focus {
@@ -52,10 +50,15 @@ input[type=password]:focus {
 	outline: none;
 }
 
-
-@media(max-width: 768px)
-{
-	div {
-		font-size: 1.2rem;
-	}
+.button {
+	display: inline-block;
+	color: #535353;
+	border: 1px solid #0000002f;
+	padding: 5px 10px;
+	font-size: 14px;
+	background-color: #00000000;
+	cursor: pointer;
+	border-radius: 3px;
+	font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	text-shadow: 1px 1px 2px #00000012;
 }

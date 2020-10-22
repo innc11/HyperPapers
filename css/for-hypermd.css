@@ -1,4 +1,32 @@
+/* 行号栏 */
 .CodeMirror-gutters {
 	border-right: 0px !important;
 	padding-right: 0px !important;
+}
+
+/* 图片 */
+.hmd-image {
+	border-radius: 3px !important;
+}
+
+/* 滚动条 */
+.CodeMirror-vscrollbar {
+	width: 15px !important;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar {
+	width: 15px !important;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background: #00000045;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-track {
+	background: #ccccccbb;
+}
+
+.CodeMirror-vscrollbar:hover::-webkit-scrollbar-thumb{
+	background-color: #00000071;
 }

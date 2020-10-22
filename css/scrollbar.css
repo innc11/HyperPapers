@@ -4,25 +4,20 @@
 	overflow-x: auto;
 }
 
-@media(min-width: 768px)
-{
-	.scroll-bar::-webkit-scrollbar {
-		width: 2px;
-	}
-	
-	.scroll-bar::-webkit-scrollbar-thumb {
-		border-radius: 2px;
-		background: #00000014;
-	}
-	
-	.scroll-bar::-webkit-scrollbar-track {
-		/* border-radius: 4px; */
-		/* background: #cccccc6b; */
-	}
-	
-	.scroll-bar:hover::-webkit-scrollbar-thumb{
-		background-color: #00000066;
-	}
+.scroll-bar::-webkit-scrollbar {
+	width: 4px;
 }
 
+.scroll-bar::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background: #00000014;
+}
 
+.scroll-bar::-webkit-scrollbar-track {
+	/* border-radius: 4px; */
+	/* background: #cccccc6b; */
+}
+
+.scroll-bar:hover::-webkit-scrollbar-thumb{
+	background-color: #00000066;
+}

@@ -76,7 +76,7 @@
     .path-cell-path {
         cursor: pointer;
         border-bottom: #00000030 1px solid;
-        font-size: 1.2rem;
+        font-size: 16px;
     }
     .path-cell-path:hover {
         background-color: #c7c7c7;
@@ -88,7 +88,7 @@
     }
 
     .filebrowser-path {
-        width: 100%;
+        width: calc(100% - 15px);
         
         padding: 0px 10px 6px 10px;
         margin: 0px 0px 4px 0px;
@@ -107,13 +107,12 @@
     }
 
     #filebrowser {
-        height: calc(100% - 80px);
-        width: 600px;
-        padding: 30px;
+        height: calc(100% - 145px);
+        max-width: 400px;
+        padding: 15px;
         margin: 40px auto;
         display: flex;
         flex-direction: column;
-        box-shadow: 2px 2px 6px #e0e0e0;
         border: 1px solid #9898982b;
         border-radius: 3px;
     }
@@ -164,8 +163,7 @@
 
     .file-item-filename {
         white-space: nowrap;
-        transition: right 0.7s;
-        margin-left: 0.5rem;
+        margin-left: 2px;
     }
 
     .file-item-filename-text {
@@ -179,72 +177,6 @@
         opacity: 1;
     }
 
-    @media(max-width: 768px)
-    {
-        #filebrowser {
-            height: 100% !important;
-            width: 100% !important;
-
-            /* padding: 0px !important; */
-            margin: 0px !important;
-            
-            border: 0px !important;
-            border-radius: 0px !important;
-        }
-
-        .file-item-filename {
-            margin-left: 0.4rem;
-        }
-
-        .file-item-filename-text {
-            font-size: 1.2rem;
-        }
-
-        .file-item {
-            line-height: 2.75rem;
-        }
-
-        .file-item-icon {
-            font-size: 1.6rem;
-            width: 20px;
-        }
-    }
-
-    @media(prefers-color-scheme: dark) {
-
-        .filebrowser-path {
-            border-color: #4c4c4f;
-        }
-    
-        #filebrowser {
-            box-shadow: 0px 0px 0px;
-        }
-        
-        .path-cell-path {
-            border-color: #8a8a8a;
-        }
-        
-        .path-cell-path:hover {
-            background-color: #5d5d5d;
-            border-color: #5d5d5d;
-        }
-        
-        .file-item:hover {
-            background-color: #555555;
-        }
-        
-        .file-item:active {
-            background-color: #878787;
-        }
-        
-        .file-item-file {
-            color: #aa7400;
-        }
-        
-        .file-item-folder {
-            color: #799bff7c;
-        }
-    }
 </style>
 
 <script lang="ts">

@@ -15,7 +15,7 @@
 				<div class="inline" style=" width: 444px; display: inline-block; line-height: 1; word-break: break-all; cursor: pointer; flex: 1; margin: 0px 5px;"
 					title="插入"
 					v-on:click="onClickPlace(attach)">
-					<div style="font-size: 15px; ">
+					<div style="font-size: 18px; ">
 						{{attach.name}} ({{byteConvert(attach.length)}})
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 
 <style type="text/css">
 	.attach-attachments {
-		height: calc(100% - 65px);
+		height: calc(100% - 70px);
 		
 		border: #0000004d solid 1px;
 		border-radius: 4px;
@@ -409,7 +409,7 @@ function requestAttachmentList(callback = () => {})
 function create() {
 	this.dialog = $('.attach-form').dialog({
 		title: '图片和附件',
-		width: Math.min(550, document.body.clientWidth - 10),
+		width: Math.min(450, document.body.clientWidth - 10),
 		height: 450,
 		modal: false,
 		autoOpen: false,
@@ -461,7 +461,7 @@ function initDialog() {
 
 function getHtml (attach: AttachObject) {
 	if(attach.isImage)
-		return '<img src="' + attach.url + '?thub=true" height="32px" width="32px" ></img>'
+		return '<div style="background-image: url(' + attach.url + '?thub=true); height: 20px; width:20px; background-repeat: no-repeat; background-size: cover;"></div>'
 	return '<i class="attach-binary-icon fa fa-file-o" aria-hidden="true" style="font-size: 20px;" ></i>'
 }
 
