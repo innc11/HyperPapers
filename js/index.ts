@@ -175,12 +175,12 @@ function websocketInit()
 		// 自动重连机制
 		if (stateBar.keepConnection)
 		{
-			let startTime = new Date().getTime() + 5000
+			let startTime = new Date().getTime() + 10000
 
 			let timer = setInterval(() => {
 				let timeDiff = startTime - new Date().getTime()
 
-				if (timeDiff>0)
+				if (timeDiff > 0)
 				{
 					stateBar.nextReconnection = timeDiff
 				}else{
@@ -190,7 +190,7 @@ function websocketInit()
 				}
 
 				fileBrowser.updateTitle()
-			}, 200)
+			}, 500)
 
 		}
 	}

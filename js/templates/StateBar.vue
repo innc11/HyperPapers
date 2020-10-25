@@ -71,7 +71,7 @@ export default {
     },
     methods: {
         getTitle: function() {
-            let reconcectionText = this.nextReconnection!=0?'[重连'+parseInt(this.nextReconnection/1000+'')+']':'[正在重连]'
+            let reconcectionText = this.nextReconnection!=0?'[重连'+parseInt(this.nextReconnection/1000+'')+'] ':'[正在重连] '
             
             return (fileBrowser.contentModified? '*':'') 
                 + (this.linkstate? '':this.keepConnection? reconcectionText:'[离线] ')
