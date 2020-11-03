@@ -105,7 +105,7 @@ function fillInputField() {
             },
             error: function(xhr: XMLHttpRequest,status: any,error: any) {
                 $.ajax({
-                    url: 'http://127.0.0.1:800/default',  
+                    url: '/default',  
                     async: true,
                     cache: false,   dataType: "text",
                     success: function(res: string) {
