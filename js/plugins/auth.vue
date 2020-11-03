@@ -100,19 +100,13 @@ function fillInputField() {
             url: "default",  async:    true,
             cache: false,    dataType: "text",
             success: function(res: string) {
-                if(isJSON(res))
+                if(isJSON(res)) {
                     $('#auth-address').val(JSON.parse(res)[0])
+                    console.log('default found')
+                }
             },
             error: function(xhr: XMLHttpRequest,status: any,error: any) {
-                $.ajax({
-                    url: '/default',  
-                    async: true,
-                    cache: false,   dataType: "text",
-                    success: function(res: string) {
-                        if(isJSON(res))
-                            $('#auth-address').val(JSON.parse(res)[0])
-                    }
-                })
+                console.log('default fail to get')
             }
         })
     }
