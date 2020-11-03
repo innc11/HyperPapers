@@ -11,11 +11,11 @@
 
 /* 滚动条 */
 .CodeMirror-vscrollbar {
-	width: 15px !important;
+	width: 18px !important;
 }
 
 .CodeMirror-vscrollbar::-webkit-scrollbar {
-	width: 15px !important;
+	width: 18px !important;
 }
 
 .CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
