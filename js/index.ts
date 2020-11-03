@@ -16,7 +16,7 @@ import '../css/index.css'
 import '../css/scrollbar.css'
 import icon from '../icons/paper-file.png'
 
-export let version = '1.1'
+export let version = '1.2'
 
 export let stateBar: any = null
 export let fileBrowser: any = null
@@ -26,9 +26,9 @@ export let eventRouter = new EventRouter()
 
 $(function() {
 	
-	// window.onerror = function(_message, source, lineno, _colno, error) {
-	// 	bubble(error+'\n'+source+' '+lineno)
-	// }
+	window.onerror = function(_message, source, lineno, _colno, error) {
+		bubble(error+'\n'+source+' '+lineno)
+	}
 
 	setTimeout(function() {
 		stateBar.alternateWindow = !stateBar.alternateWindow

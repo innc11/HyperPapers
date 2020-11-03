@@ -29,8 +29,8 @@
             </div>
 
             <div v-if="filebrowser.editing" >
-                <div class="button" v-on:click="onClickSave" > 保存</div>
                 <div class="button" v-on:click="onClickAttachments">图片</div>
+                <div class="button" v-on:click="onClickSave" > 保存</div>
                 <div class="button" title='右键点击：不保存关闭'
                     v-on:click="onClickClose"
                     v-on:click.right.prevent="onClickCloseWithRight" >
@@ -110,7 +110,7 @@ export default {
         alternateWindow: function(newValue: boolean, oldValue: boolean) {
             if(newValue==true) {
                 $('#editor').css('display', 'none')
-                $('#filebrowser').css('display', 'flex')
+                $('#filebrowser').css('display', '')
             } else {
                 $('#editor').css('display', '')
                 $('#filebrowser').css('display', 'none')

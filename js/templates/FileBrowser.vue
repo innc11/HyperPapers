@@ -107,10 +107,10 @@
     }
 
     #filebrowser {
-        height: calc(100% - 145px);
-        max-width: 400px;
+        height: calc(100% - 50px);
+        max-width: 500px;
         padding: 15px;
-        margin: 40px auto;
+        margin: 10px auto;
         display: flex;
         flex-direction: column;
         border: 1px solid #9898982b;
