@@ -30,7 +30,7 @@ jobs:
       - name: Depoly
         run: |
           cd dist
-          echo ${{ secrets.DF }} >> default
+          echo "[\"wss://server.innc11.cn:800\"]" >> default
           git init
           git config user.email innc11@163.com
           git config user.name innc11
