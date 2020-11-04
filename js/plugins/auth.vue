@@ -102,8 +102,10 @@ function fillInputField() {
             success: function(res: string) {
                 if(isJSON(res)) {
                     $('#auth-address').val(JSON.parse(res)[0])
-                    console.log('default found')
+                    
+                    console.log('default loaded')
                 }
+                console.log('default found')
             },
             error: function(xhr: XMLHttpRequest,status: any,error: any) {
                 console.log('default fail to get')
