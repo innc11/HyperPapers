@@ -102,13 +102,13 @@ function fillInputField() {
             success: function(res: string) {
                 if(isJSON(res)) {
                     $('#auth-address').val(JSON.parse(res)[0])
-                    
-                    console.log('default loaded')
+                    console.log('default file used')
+                } else {
+                    console.log('fail to parse the default address file, it may not be a standard json file')
                 }
-                console.log('default found')
             },
             error: function(xhr: XMLHttpRequest,status: any,error: any) {
-                console.log('default fail to get')
+                console.log('fail to load the default address file')
             }
         })
     }
